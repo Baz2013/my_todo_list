@@ -65,12 +65,14 @@ module.exports = {
         };
         todos.push(todo);
 
+        // console.log(`endTime is: ${new Date(t.endTime.trim()).getTime()}`);
+
         (async () => {
             var td = await db_todo.create({
             ownerId:'123456',
             name: t.name.trim(),
             description: t.description.trim(),
-            endTime: 123456789,
+            endTime: new Date(t.endTime.trim()).getTime(),
             status: 1
             });
         console.log('created: ' + JSON.stringify(td));})();

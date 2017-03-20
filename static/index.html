@@ -97,7 +97,8 @@ $(function () {
         el: '#vmAdd',
         data: {
             name: '',
-            description: ''
+            description: '',
+            endTime: ''
         },
         methods: {
             submit: function () {
@@ -173,6 +174,10 @@ $(function () {
                                 <label>Description:</label>
                                 <input type="text" v-model="description" class="form-control" placeholder="Enter description">
                             </div>
+                            <div class="form-group">
+                                <label>expire time:</label>
+                                <input type="datetime-local" v-model="endTime" class="form-control" placeholder="expire time" value="2017-03-21T21:30">
+                            </div>
                             <button type="submit" class="btn btn-default">Add</button>
                         </form>
                     </div>
@@ -224,12 +229,8 @@ $(function () {
     <footer style="background-color:#ddd; padding: 20px 0;">
         <div class="container">
             <p>
-                <a target="_blank" href="http://www.liaoxuefeng.com">Website</a> -
-                <a target="_blank" href="https://github.com/michaelliao/learn-javascript">GitHub</a> -
-                <a target="_blank" href="http://weibo.com/liaoxuefeng">Weibo</a>
+                <a target="_blank" href="https://github.com/Baz2013">GitHub</a> -
             </p>
-            <p>This JavaScript course is created by <a target="_blank" href="http://weibo.com/liaoxuefeng">@廖雪峰</a>.</p>
-            <p>Code licensed <a target="_blank" href="https://github.com/michaelliao/learn-javascript/blob/master/LICENSE">Apache</a>.</p>
         </div>
     </footer>
 </body>
